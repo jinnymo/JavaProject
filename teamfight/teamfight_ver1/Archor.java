@@ -15,7 +15,7 @@ public class Archor {
 		attackPower = at;
 		count++;
 		this.isDie = false; 
-	}
+	} 
 	
 	public void archorGA(String name, int ap, int a, int b) {//GetAttak ,//attak power
 		health -= ap;
