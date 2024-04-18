@@ -9,7 +9,7 @@ public class Battlefiled {
 	static String[][] field = new String[4][10];
 
 	public static void main(String[] args) {
-
+		Scanner sc = new Scanner(System.in);
 		Random random = new Random();
 		int posA;
 		int posB;
@@ -36,13 +36,14 @@ public class Battlefiled {
 		while(true) {
 			check();
 			flag1 = true;
+			
 			while (flag1) {
 				posA = random.nextInt(2);
 				posB = random.nextInt(10);
 				flag1 = !(warrior[posA][posB].getIsDie());// 살아있는 여부 가져와서 저장
 				if (flag1 == true) {
 					warrior[posA][posB].warriorGA("아처", 10, posA, posB);
-					System.out.println(warrior[0][0].getWarriorCount());
+					System.out.println(Warrior.count);warrior[0][0].getWarriorCount();
 					break;
 				}
 				// System.out.println(posA +"a"+ posB );
