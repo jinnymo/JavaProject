@@ -17,6 +17,11 @@ public class ImageDoubleArrayMapTest  {
 	private int x;
 	private int y;
 	Color MapColor;
+	
+	public int getMap(int x,int y ) {
+		return Map[y][x];
+	}
+	
 	public ImageDoubleArrayMapTest() {
 		
 		try {
