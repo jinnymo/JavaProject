@@ -4,5 +4,9 @@
 /**
  * 
  */
-module JavaMiniProject {
+
+
+module tenco_swing {
+	requires java.desktop;
+	
 }

@@ -24,7 +24,7 @@ public class Battlefiled {
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 2; j++) {
 
-				//System.out.println(warrior[i]);
+				// System.out.println(warrior[i]);
 				warrior[j][i] = new Warrior(100, 10);// 위에서 미리선언한 Warrior의 값을 할당 시킴
 				archor[j][i] = new Archor(100, 10);
 
@@ -32,18 +32,18 @@ public class Battlefiled {
 
 		}
 
-		
-		while(true) {
+		while (true) {
 			check();
 			flag1 = true;
-			
+
 			while (flag1) {
 				posA = random.nextInt(2);
 				posB = random.nextInt(10);
 				flag1 = !(warrior[posA][posB].getIsDie());// 살아있는 여부 가져와서 저장
 				if (flag1 == true) {
 					warrior[posA][posB].warriorGA("아처", 10, posA, posB);
-					System.out.println(Warrior.count);warrior[0][0].getWarriorCount();
+					System.out.println(Warrior.count);
+					warrior[0][0].getWarriorCount();
 					break;
 				}
 				// System.out.println(posA +"a"+ posB );
@@ -60,25 +60,24 @@ public class Battlefiled {
 				}
 				// System.out.println(posA +"a"+ posB );
 			}
-		
+
 		}
-		
-		
-		
+
 	}
+
 	static void check() {
 		int a = Warrior.count;
 		int b = Archor.count;
-		if(a == 0) {
-			System.out.println("| 아처 승리 |  아처 생존자 수 : " +b);
+		if (a == 0) {
+			System.out.println("| 아처 승리 |  아처 생존자 수 : " + b);
 			System.exit(0);
-			
-		}else if(b ==0) {
-			System.out.println("| 전사 승리 |  전사 생존자 수 : " +a);
+
+		} else if (b == 0) {
+			System.out.println("| 전사 승리 |  전사 생존자 수 : " + a);
 			System.exit(0);
-			
+
 		}
-		
+
 	}
 
 	static void creatField() {
