@@ -40,7 +40,7 @@ public class FrameTest extends JFrame {
 		setResizable(false);
 		setLocationRelativeTo(null);// jframe 모니터 가운데 자동 배치
 		setVisible(true);
-		add(backgroundMap);
+		
 		add(player);
 		// add(bubble);
 	}
