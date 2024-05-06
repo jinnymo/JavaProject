@@ -3,10 +3,10 @@
  */
 /**
  * 
- */
+*/
 
 
-module tenco_swing {
+module JavaMiniProject {
 	requires java.desktop;
-	
+
 }
