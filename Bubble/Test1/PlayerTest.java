@@ -135,7 +135,7 @@ public class PlayerTest extends JLabel implements Moveable {
 				while(true) {
 					x++;
 					setLocation(x, y);
-					if (blueWallCrash) {
+					if () {
 						
 					}
 					try {

@@ -54,6 +54,7 @@ public class RectangleEx extends JFrame {
 		}
 
 		public MyPanel() {
+			
 			this.addMouseListener(new MouseAdapter() {
 
 				@Override
@@ -65,6 +66,7 @@ public class RectangleEx extends JFrame {
 
 				}
 
+				
 				@Override
 				public void mouseMoved(MouseEvent e) {
 
