@@ -19,7 +19,7 @@ public class MainFrame extends JFrame {
 	private int[][] Map;
 	Color MapColor;
 	private BufferedImage mapImage;
-	private String mapAdress = "IMG/background_test_1010.png";
+	private String mapAdress = "IMG/background_test4_1010.png";
 
 	private final int PIXEL_COLOR_WHITE = 0;
 	private final int PIXEL_COLOR_RED = 1;
@@ -60,11 +60,13 @@ public class MainFrame extends JFrame {
 
 	private void addEventListener() {
 		new Thread(new Player1KeyListener(mContext,player1)).start();
-
+		
+		
 	}
 	private void mapArrayAdd() {
 		try {
 			mapImage = ImageIO.read(new File(mapAdress));
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -76,7 +78,8 @@ public class MainFrame extends JFrame {
 				int x = 50+100*j;
 				int y = 50+100*i;
 				//System.out.println(x+"  "+y);
-				Map[i][j] = getColor( j, i);
+				Map[i][j] = getColor( x, y);
+				//System.out.println(j+"|||"+i);
 				System.out.print("["+Map[i][j]+"]");
 			}
 			System.out.println();
@@ -85,13 +88,17 @@ public class MainFrame extends JFrame {
 	}
 	public int getColor(int x, int y) {
 		MapColor = new Color(mapImage.getRGB(x, y));
+
 		if (MapColor.getRed() ==255 && MapColor.getGreen() ==0 && MapColor.getBlue() ==0 ) {
-			
+	
 			return PIXEL_COLOR_RED;//빨강
 		}else if (MapColor.getRed() ==0&&MapColor.getGreen() ==0&&MapColor.getBlue() ==255 ) {
 			return PIXEL_COLOR_BLUE;//파랑
-		}else {
+		}else if(MapColor.getRed() ==255&&MapColor.getGreen() ==255&&MapColor.getBlue() ==255) {
 			return PIXEL_COLOR_WHITE;//흰색
+		}else {
+			return 5;//흰색
+
 		}
 	}
 	public static void main(String[] args) {
